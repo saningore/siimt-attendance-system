@@ -1,0 +1,158 @@
+:root {
+  --ink: #1c2822;
+  --paper: #f3efe6;
+  --sheet: #fffdf8;
+  --line: #e3daca;
+  --green: #146c54;
+  --green-dark: #0d3d32;
+  --muted: #5c675f;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+.site-nav {
+  background: var(--green-dark);
+  --bs-navbar-color: rgba(255, 255, 255, 0.82);
+  --bs-navbar-hover-color: #fff;
+  --bs-navbar-active-color: #fff;
+  --bs-navbar-brand-color: #fff;
+  --bs-navbar-brand-hover-color: #fff;
+  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.35);
+}
+
+.site-nav .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.site-nav .navbar-text {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.site-nav .nav-link.active {
+  font-weight: 600;
+}
+
+.page-head {
+  margin-bottom: 1.25rem;
+}
+
+.page-head h1 {
+  font-size: 1.85rem;
+  margin-bottom: 0.15rem;
+}
+
+.page-head p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.sheet {
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+}
+
+.stat {
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  padding: 1rem 1.1rem 1.05rem;
+  height: 100%;
+}
+
+.stat-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  margin: 0.35rem 0 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-students { border-top: 4px solid #355c7d; }
+.stat-present { border-top: 4px solid var(--green); }
+.stat-absent { border-top: 4px solid #9f2d2d; }
+.stat-late { border-top: 4px solid #8a5a00; }
+
+.btn-success {
+  --bs-btn-bg: var(--green);
+  --bs-btn-border-color: var(--green);
+  --bs-btn-hover-bg: var(--green-dark);
+  --bs-btn-hover-border-color: var(--green-dark);
+  --bs-btn-active-bg: var(--green-dark);
+  --bs-btn-active-border-color: var(--green-dark);
+}
+
+.btn-outline-success {
+  --bs-btn-color: var(--green);
+  --bs-btn-border-color: var(--green);
+  --bs-btn-hover-bg: var(--green);
+  --bs-btn-hover-border-color: var(--green);
+  --bs-btn-active-bg: var(--green-dark);
+  --bs-btn-active-border-color: var(--green-dark);
+}
+
+.progress {
+  height: 0.7rem;
+  background: #efeae0;
+}
+
+.progress-bar {
+  background: var(--green);
+}
+
+.sheet .table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.mark {
+  display: inline-block;
+  min-width: 5.6rem;
+  text-align: center;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.mark-present { background: #e5f4ee; color: var(--green); }
+.mark-absent { background: #fdecec; color: #9f2d2d; }
+.mark-late { background: #fff4d6; color: #8a5a00; }
+.mark-unmarked { background: #eeeae2; color: var(--muted); }
+
+.status-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.status-group .btn {
+  min-width: 5.3rem;
+}
+
+.low-row {
+  background: #fff6e8;
+}
+
+footer {
+  color: var(--muted);
+}

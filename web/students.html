@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Students · ClassRoll</title>
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark site-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ClassRoll</a>
+      <span class="navbar-text d-none d-md-inline">Attendance register</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Open menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Today</a></li>
+          <li class="nav-item"><a class="nav-link active" href="students.html">Students</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Take attendance</a></li>
+          <li class="nav-item"><a class="nav-link" href="records.html">Records</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <header class="page-head">
+      <h1>Students</h1>
+      <p id="student-count">The class list is the source of the register.</p>
+    </header>
+    <div id="alert" class="alert" hidden></div>
+
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <form id="student-form" class="sheet p-3 p-md-4" autocomplete="off">
+          <h2 class="h5" id="form-title">Add a student</h2>
+          <div class="mb-3">
+            <label class="form-label" for="admission-no">Admission number</label>
+            <input class="form-control" id="admission-no" maxlength="20" placeholder="STU013" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="full-name">Full name</label>
+            <input class="form-control" id="full-name" maxlength="100" placeholder="Full name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" id="email" type="email" maxlength="100" placeholder="name@school.com" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="class-name">Class</label>
+            <select class="form-select" id="class-name" required>
+              <option>Form 1</option>
+              <option>Form 2</option>
+              <option>Form 3</option>
+              <option>Form 4</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="gender">Gender</label>
+            <select class="form-select" id="gender" required>
+              <option value="">Choose</option>
+              <option>Female</option>
+              <option>Male</option>
+            </select>
+          </div>
+          <button class="btn btn-success" id="save-student" type="submit">Save student</button>
+          <button class="btn btn-link" id="cancel-edit" type="button" hidden>Cancel</button>
+        </form>
+      </div>
+      <div class="col-lg-8">
+        <section class="sheet p-3 p-md-4">
+          <label class="form-label" for="search">Search</label>
+          <input class="form-control mb-3" id="search" placeholder="Name, email, admission number, or class">
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Admission</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Class</th>
+                  <th>Gender</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="student-rows"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container pb-4 small">ClassRoll · Web Technologies 1 practical</footer>
+  <script src="vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/students.js"></script>
+</body>
+</html>

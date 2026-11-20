@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Today · ClassRoll</title>
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark site-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ClassRoll</a>
+      <span class="navbar-text d-none d-md-inline">Attendance register</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Open menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Today</a></li>
+          <li class="nav-item"><a class="nav-link" href="students.html">Students</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Take attendance</a></li>
+          <li class="nav-item"><a class="nav-link" href="records.html">Records</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <header class="page-head d-flex flex-wrap justify-content-between align-items-end gap-3">
+      <div>
+        <h1>Today</h1>
+        <p id="today-label">Loading the date…</p>
+      </div>
+      <a class="btn btn-success" href="register.html">Take attendance</a>
+    </header>
+
+    <section class="row g-3 mb-4">
+      <div class="col-6 col-lg-3">
+        <article class="stat stat-students">
+          <p class="stat-label">Students</p>
+          <p class="stat-value" id="stat-students">–</p>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3">
+        <article class="stat stat-present">
+          <p class="stat-label">Present</p>
+          <p class="stat-value" id="stat-present">–</p>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3">
+        <article class="stat stat-absent">
+          <p class="stat-label">Absent</p>
+          <p class="stat-value" id="stat-absent">–</p>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3">
+        <article class="stat stat-late">
+          <p class="stat-label">Late</p>
+          <p class="stat-value" id="stat-late">–</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <section class="sheet p-3 p-md-4 h-100">
+          <h2 class="h5">Absent and late</h2>
+          <p id="rate-line" class="text-secondary">Loading today's register…</p>
+          <div class="progress mb-3" role="progressbar" aria-label="Attendance today" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" id="rate-bar" style="width: 0%"></div>
+          </div>
+          <p id="attention-note" class="mb-0"></p>
+          <div class="table-responsive" id="attention-table" hidden>
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Class</th>
+                  <th>Admission</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="attention-rows"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+      <div class="col-lg-5">
+        <section class="sheet p-3 p-md-4 h-100">
+          <h2 class="h5">By class</h2>
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>P</th>
+                  <th>A</th>
+                  <th>L</th>
+                  <th>Blank</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="class-rows"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container pb-4 small">ClassRoll · Web Technologies 1 practical</footer>
+  <script src="vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
